@@ -331,28 +331,18 @@ The DBMS’s storage manager is responsible for managing a database’s files. I
 
 ### 2. Fixed-Length Records
 - Fixed-length records simplify implementation compared to variable-length records.
-- Example of a fixed-length instructor record:
-    ```plaintext
-    type instructor = record
-        ID varchar(5);
-        name varchar(20);
-        dept_name varchar(20);
-        salary numeric(8,2);
-    end
-    ```
-- In this example, each record occupies 53 bytes, with each character using 1 byte and the numeric value occupying 8 bytes.
 
-### 3. Handling Records
+####  Handling Records
 - **Storage**: Records are stored consecutively in the file.
 - **Deletion**: When a record is deleted, the space it occupied can be reused for future insertions.
     - Instead of moving all subsequent records, the last record can be moved to fill the gap.
     - Deleted records are maintained in a **free list**, which links the addresses of deleted records to facilitate reuse.
 
-### 4. File Header
+#### File Header
 - The file contains a header that stores information, including the address of the first deleted record. 
 - This header helps manage available space for new records efficiently.
 
-### 5. Insertion and Deletion
+####  Insertion and Deletion
 - Insertion into fixed-length record files is straightforward since the space freed by a deleted record matches the space required for a new record.
 - In contrast, variable-length records complicate insertion and deletion due to varying record sizes.
 
@@ -375,13 +365,6 @@ Any technique for implementing variable-length records must address two fundamen
 - Variable-length attributes are represented by a pair (offset, length), which denotes where the data begins and its length in bytes.
 - A **null bitmap** is included to indicate which attributes have null values, optimizing storage space when many attributes are null.
 
-#### Example Structure
-- **Attributes**: 
-  - ID (variable-length string)
-  - Name (variable-length string)
-  - Department Name (variable-length string)
-  - Salary (fixed-size number)
-
 - **Storage**:
   - Offset and length for variable-length attributes are stored in bytes, while the null bitmap fits in 1 byte for up to four attributes.
 
@@ -401,7 +384,7 @@ Each block contains a header with:
 ### Indirection
 Pointers reference entries in the header instead of directly pointing to records. This allows records to be moved within the block, preventing fragmentation and simplifying space management.
 
-## 3. Storing Large Objects
+## 5. Storing Large Objects
 Databases often handle data that can exceed the size of a disk block, such as images, audio recordings, or videos.
 
 ### Size Limitation
