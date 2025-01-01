@@ -79,7 +79,7 @@ A major purpose of a database system is to provide users with an abstract view o
 
 ## Data Abstraction
 
-![Data Abstraction](imags/dataabstraction.png)
+![Data Abstraction](../imags/dataabstraction.png)
 
 For the system to be usable, it must retrieve data efficiently. Designers use complex data structures to represent data in the database to ensure this efficiency. To simplify users’ interactions with the system, data abstraction is categorized into three levels:
 
@@ -292,7 +292,7 @@ The **Query Processor** simplifies and facilitates data access for users, enabli
 
 Database architecture encompasses the various components of a database system and their interconnections. It is influenced by the underlying computer system and can be categorized into different types:
 
-![Databasearc](imags/dataarch.png)
+![Databasearc](../imags/dataarch.png)
 
 ## Types of Database Systems
 1. **Centralized Systems:** All components run on a single machine.
@@ -310,7 +310,7 @@ Database applications can be organized into two or three tiers:
 - **Client Machine:** Hosts the application and communicates directly with the database system using query language statements.
 - **Server Machine:** Runs the database system, accessed through Application Program Interface (API) standards like ODBC and JDBC.
 
-![Two-Tier Architecture](imags/two-tier.png)
+![Two-Tier Architecture](i../mags/two-tier.png)
 
 ### Three-Tier Architecture
 - **Client Machine:** Acts as a front end, not making direct database calls.
@@ -319,7 +319,7 @@ Database applications can be organized into two or three tiers:
 
 This architecture is more suitable for larger applications where business logic can be centralized in the application server.
 
-![Three-Tier Architecture](imags/three-tier.png)
+![Three-Tier Architecture](../imags/three-tier.png)
 
 ---
 
@@ -383,7 +383,7 @@ The relational model defines a database abstraction based on relations to avoid 
 
 ## Data Independence
 
-![Data Independence](imags/dataindependence.png)
+![Data Independence](../imags/dataindependence.png)
 
 
 ## Relational Model: Keys and Constraints
@@ -428,7 +428,7 @@ The relational model defines a database abstraction based on relations to avoid 
 
 Relational Algebra is a set of fundamental operations to retrieve and manipulate tuples in a relation. Each operator takes in one or more relations as inputs, and outputs a new relation. To write queries we can ”chain” these operators together to create more complex operations.
 
-![relationalalgebra](imags/relationalalgebra.png)
+![relationalalgebra](../imags/relationalalgebra.png)
 
  
 ---
@@ -436,7 +436,7 @@ Relational Algebra is a set of fundamental operations to retrieve and manipulate
 ## Relational Algebra Operations
 
 This document provides an overview of key operations in relational algebra, which is used for querying and manipulating relational databases.
-![relational algebra](imags/relational-algebra.png)
+![relational algebra](../imags/relational-algebra.png)
 
 ### Selection (σ)
 
